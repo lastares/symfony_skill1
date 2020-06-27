@@ -1,0 +1,14 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+# 用户管理模块
+user_module:
+    resource: '../src/UserModule/Controller'
+    type: annotation
+
+# 商品模块
+goods_module:
+    resource: '../src/GoodsModule/Router'
+    type: directory
+    prefix: goods

@@ -1,0 +1,8 @@
+framework:
+    default_locale: '%locale%'
+    translator:
+        paths:
+            - '%kernel.project_dir%/translations'
+            - '%kernel.project_dir%/src/UserModule/translations'
+        fallbacks:
+            - '%locale%'
