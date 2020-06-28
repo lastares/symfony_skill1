@@ -25,6 +25,7 @@ class UserController extends AbstractController
      */
     public function create(Request $request): Response
     {
+
         // 构建form表单对象
         $form = $this->createForm(UserCreateForm::class);
 
@@ -42,4 +43,22 @@ class UserController extends AbstractController
             'data' => $form->getData()
         ]);
     }
+
+    /**
+     * @Route(
+     *     path="/user/test",
+     *     name="user_test",
+     *     methods={"POST"}
+     * )
+     *
+     * @param Request $request
+     * @throws FormValidateFailedException
+     */
+    public function test(Request $request): void
+    {
+        dump('dump function test');
+        dd('dd function test');
+        echo 'hello, world';
+    }
+
 }
